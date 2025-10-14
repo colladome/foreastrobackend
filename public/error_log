@@ -1,0 +1,22 @@
+[06-Sep-2024 04:19:13 UTC] PHP Warning:  Unknown: open_basedir restriction in effect. File(/home/clsxmibpicus/public_html/public/index.php) is not within the allowed path(s): (/www/wwwroot/foreastro.bonwic.cloud/:/tmp/) in Unknown on line 0
+[06-Sep-2024 04:19:13 UTC] PHP Warning:  Unknown: Failed to open stream: Operation not permitted in Unknown on line 0
+[06-Sep-2024 04:19:13 UTC] PHP Fatal error:  Failed opening required '/home/clsxmibpicus/public_html/public/index.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in Unknown on line 0
+[06-Sep-2024 04:19:15 UTC] PHP Warning:  Unknown: open_basedir restriction in effect. File(/home/clsxmibpicus/public_html/public/index.php) is not within the allowed path(s): (/www/wwwroot/foreastro.bonwic.cloud/:/tmp/) in Unknown on line 0
+[06-Sep-2024 04:19:15 UTC] PHP Warning:  Unknown: Failed to open stream: Operation not permitted in Unknown on line 0
+[06-Sep-2024 04:19:15 UTC] PHP Fatal error:  Failed opening required '/home/clsxmibpicus/public_html/public/index.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in Unknown on line 0
+[06-Sep-2024 04:19:24 UTC] PHP Warning:  Unknown: open_basedir restriction in effect. File(/home/clsxmibpicus/public_html/public/index.php) is not within the allowed path(s): (/www/wwwroot/foreastro.bonwic.cloud/:/tmp/) in Unknown on line 0
+[06-Sep-2024 04:19:24 UTC] PHP Warning:  Unknown: Failed to open stream: Operation not permitted in Unknown on line 0
+[06-Sep-2024 04:19:24 UTC] PHP Fatal error:  Failed opening required '/home/clsxmibpicus/public_html/public/index.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in Unknown on line 0
+[06-Sep-2024 04:20:17 UTC] PHP Warning:  Unknown: open_basedir restriction in effect. File(/home/clsxmibpicus/public_html/public/index.php) is not within the allowed path(s): (/www/wwwroot/foreastro.bonwic.cloud/:/tmp/) in Unknown on line 0
+[06-Sep-2024 04:20:17 UTC] PHP Warning:  Unknown: Failed to open stream: Operation not permitted in Unknown on line 0
+[06-Sep-2024 04:20:17 UTC] PHP Fatal error:  Failed opening required '/home/clsxmibpicus/public_html/public/index.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in Unknown on line 0
+[06-Sep-2024 04:20:19 UTC] PHP Warning:  Unknown: open_basedir restriction in effect. File(/home/clsxmibpicus/public_html/public/index.php) is not within the allowed path(s): (/www/wwwroot/foreastro.bonwic.cloud/:/tmp/) in Unknown on line 0
+[06-Sep-2024 04:20:19 UTC] PHP Warning:  Unknown: Failed to open stream: Operation not permitted in Unknown on line 0
+[06-Sep-2024 04:20:19 UTC] PHP Fatal error:  Failed opening required '/home/clsxmibpicus/public_html/public/index.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in Unknown on line 0
+[06-Sep-2024 04:21:12 UTC] PHP Warning:  Unknown: open_basedir restriction in effect. File(/home/clsxmibpicus/public_html/public/index.php) is not within the allowed path(s): (/www/wwwroot/foreastro.bonwic.cloud/:/tmp/) in Unknown on line 0
+[06-Sep-2024 04:21:12 UTC] PHP Warning:  Unknown: Failed to open stream: Operation not permitted in Unknown on line 0
+[06-Sep-2024 04:21:12 UTC] PHP Fatal error:  Failed opening required '/home/clsxmibpicus/public_html/public/index.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in Unknown on line 0
+[06-Sep-2024 04:21:14 UTC] PHP Warning:  Unknown: open_basedir restriction in effect. File(/home/clsxmibpicus/public_html/public/index.php) is not within the allowed path(s): (/www/wwwroot/foreastro.bonwic.cloud/:/tmp/) in Unknown on line 0
+[06-Sep-2024 04:21:14 UTC] PHP Warning:  Unknown: Failed to open stream: Operation not permitted in Unknown on line 0
+[06-Sep-2024 04:21:14 UTC] PHP Fatal error:  Failed opening required '/home/clsxmibpicus/public_html/public/index.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in Unknown on line 0
+[06-Sep-2024 11:09:53 Asia/Kolkata] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 98570240 bytes) in /home/clsxmibpicus/public_html/app/Http/Controllers/HomeController.php on line 54
