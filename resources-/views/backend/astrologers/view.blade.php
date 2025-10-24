@@ -120,54 +120,18 @@
 
                         <h4>Astro Profile Image</h4>
                         <div class="row">
-                            @php $images = App\Models\File::where(['type' => 'astro_profile_image','other_id' => $astrologer->id])->get(); @endphp
-                            @foreach($images as $image)
-                            <div class="col-md-3 mb-3">
-                                <span>
-                                    <img height="100px" src="{{ url(Illuminate\Support\Facades\Storage::url($image->path)) }}">&nbsp; &nbsp;
-                                    <!-- @if($image->status=='0')
-                                <a href="{{ route('profileImage.approve', ['id' => $image->id, 'astro_id' =>$astrologer->id ]) }}" class="btn btn-primary">Pending</a>
-                            @else 
-                                <a href="" class="btn btn-success">Approved</a> 
-                            @endif -->
+                        @php $images = App\Models\File::where(['type' => 'astro_profile_image','other_id' => $astrologer->id])->get(); @endphp
+                        @foreach($images as $image)
+                        <div class="col-md-3 mb-3">
+                        <span><img height="100px" src="{{ url(Illuminate\Support\Facades\Storage::url($image->path)) }}">&nbsp; &nbsp; @if($image->status=='0')<a href="{{ route('profileImage.approve', ['id' => $image->id, 'astro_id' =>$astrologer->id ]) }}" class="btn btn-primary">Pending</a>@else <a href="" class="btn btn-success">Approved</a> @endif</span>
 
-                                    @if($astrologer->profile_status == 'approved' || $astrologer->profile_status == 'rejected')
-                                    <div class="btn-group">
-                                        @if($astrologer->profile_status == 'approved')
-                                        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Approved
-                                        </button>
-                                        @elseif($astrologer->profile_status == 'rejected')
-                                        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Rejected
-                                        </button>
-                                        @endif
-                                        
-                                        
-                                        <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="{{ route('admin.astrologer.active', ['id'=> $astrologer->id, 'status' => 'approved']) }}">Approved</a>
-                                            <a class="dropdown-item rejectOption"
-                                            data-url="{{ route('admin.astrologer.reject', $astrologer->id) }}">
-                                            Rejected
-                                        </a>
-
-
-                                    </div>
-                                </div>
-                                    @if($astrologer->profile_status == 'rejected')
-                                    <div class="py-4"><strong>Rejection Remark: </strong>{{ $astrologer->remark; }}</div>
-                                    @endif
-                                @endif
-                                
-                                </span>
-
-                            </div>
-                            @endforeach
+                        </div>
+                        @endforeach
                         </div>
 
 
 
-
+                       
 
 
 
@@ -259,7 +223,7 @@
 
                                 <form method="post" action="{{ route('admin.astrologer.commissionPercent', $astrologer->id) }}">
                                     @csrf
-                                    <div class="form-group row">
+                                     <div class="form-group row">
                                         <label class="col-sm-3 col-from-label" for="purchase_code">Call Charges Per Min</label>
                                         <div class="col-sm-9">
                                             <input type="text" id="call_charges_per_min" placeholder="Call Charges Per Min" value="{{ $astrologer->call_charges_per_min }}" name="call_charges_per_min" class="form-control" autocomplete="off" required>
@@ -268,8 +232,8 @@
                                         <span class="text-danger">{{ $errors->first('call_charges_per_min') }}</span>
                                         @endif
                                     </div>
-
-                                    <div class="form-group row">
+                                    
+                                     <div class="form-group row">
                                         <label class="col-sm-3 col-from-label" for="purchase_code">Chat Charges Per Min</label>
                                         <div class="col-sm-9">
                                             <input type="text" id="chat_charges_per_min" placeholder="Chat Charges Per Min" value="{{ $astrologer->chat_charges_per_min }}" name="chat_charges_per_min" class="form-control" autocomplete="off" required>
@@ -278,8 +242,8 @@
                                         <span class="text-danger">{{ $errors->first('chat_charges_per_min') }}</span>
                                         @endif
                                     </div>
-
-                                    <div class="form-group row">
+                                    
+                                     <div class="form-group row">
                                         <label class="col-sm-3 col-from-label" for="purchase_code">Video Charges Per Min</label>
                                         <div class="col-sm-9">
                                             <input type="text" id="video_charges_per_min" placeholder="Commission Percent" value="{{ $astrologer->video_charges_per_min }}" name="video_charges_per_min" class="form-control" autocomplete="off" required>
@@ -288,23 +252,23 @@
                                         <span class="text-danger">{{ $errors->first('video_charges_per_min') }}</span>
                                         @endif
                                     </div>
-
-
+                                    
+                                 
                                     <div class="form-group row">
                                         <label class="col-sm-3 col-from-label" for="purchase_code">Commission Percent</label>
                                         <div class="col-sm-9">
-                                            <input type="text" id="commission_percent" placeholder="Commission Percent" value="{{ $astrologer->commission_percent }}" name="commission_percent" class="form-control" autocomplete="off">
+                                            <input type="text" id="commission_percent" placeholder="Commission Percent" value="{{ $astrologer->commission_percent }}" name="commission_percent" class="form-control" autocomplete="off" >
                                         </div>
                                         @if($errors->has('commission_percent'))
                                         <span class="text-danger">{{ $errors->first('commission_percent') }}</span>
                                         @endif
                                     </div>
-
-
-                                    <div class="form-group row">
+                                    
+                                    
+                                     <div class="form-group row">
                                         <label class="col-sm-3 col-from-label" for="purchase_code">Score</label>
                                         <div class="col-sm-9">
-                                            <input type="text" id="score" placeholder="Score" value="{{ $astrologer->score }}" name="score" class="form-control" autocomplete="off">
+                                            <input type="text" id="score" placeholder="Score" value="{{ $astrologer->score }}" name="score" class="form-control" autocomplete="off" >
                                         </div>
                                         @if($errors->has('score'))
                                         <span class="text-danger">{{ $errors->first('score') }}</span>
@@ -360,96 +324,57 @@
 <!-- Table -->
 <section class="misscall-table-sections">
     <div class="card">
-        <div class="card-header">
-            <h4 class="mb-0">Call Logs</h4>
-        </div>
-        <div class="card-body">
-            <div class="table-responsivee">
-                <table class="table table-bordered" id="misscalls-datatable">
-                    <thead>
-                        <tr>
-                            <td>#</td>
-                            <td>User Name</td>
-                            <td>Status</td>
-                            <td>Time</td>
-                            <td>Date</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach($missCallLogs ?? [] as $missCallLog)
-                        <tr>
-                            <td>{{ $loop->iteration }}</td>
-                            <td><a href="#">{{ $missCallLog->user->name }}</a></td>
-                            <td>
-                                @php
-                                $status = strtolower($missCallLog->status);
-                                $colors = [
-                                'accept' => 'text-success',
+    <div class="card-header">
+        <h4 class="mb-0">Call Logs</h4>  
+    </div>
+    <div class="card-body">        
+    <div class="table-responsivee">
+        <table class="table table-bordered" id="misscalls-datatable">
+            <thead>
+                <tr>
+                    <td>#</td>
+                    <td>User Name</td>
+                    <td>Status</td>
+                    <td>Time</td>
+                    <td>Date</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($missCallLogs ?? [] as $missCallLog)
+                <tr>
+                    <td>{{ $loop->iteration }}</td>
+                    <td><a href="#">{{ $missCallLog->user->name }}</a></td>
+                    <td>
+                        @php
+                            $status = strtolower($missCallLog->status);
+                            $colors = [
+                                'accept'   => 'text-success',
                                 'misscall' => 'text-danger',
-                                'cancel' => 'text-secondary',
-                                'reject' => 'text-warning',
-                                ];
-                                $colorClass = $colors[$status] ?? 'text-black bg-gray-50';
-                                @endphp
-
-                                <span class="px-2 py-1 rounded {{ $colorClass }}">
-                                    {{ str()->title($status) }}
-                                </span>
-                            </td>
-                            <td>{{ $missCallLog->created_at->format('h:i:s A') }}</td>
-                            <td>{{ $missCallLog->created_at->format('F d, Y') }}</td>
-                        </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-            </div>
-        </div>
+                                'cancel'   => 'text-secondary',
+                                'reject'   => 'text-warning',
+                            ];
+                            $colorClass = $colors[$status] ?? 'text-black bg-gray-50';
+                        @endphp
+                        
+                        <span class="px-2 py-1 rounded {{ $colorClass }}">
+                            {{ str()->title($status) }}
+                        </span>
+                    </td>
+                    <td>{{ $missCallLog->created_at->format('h:i:s A') }}</td>
+                    <td>{{ $missCallLog->created_at->format('F d, Y') }}</td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
+    </div>
     </div>
 </section>
 <!-- End Table-->
 
-<!-- Rejection Modal -->
-<div class="modal fade" id="rejectionModal" tabindex="-1" aria-labelledby="rejectionModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <form id="rejectionForm" method="POST" action="">
-            @csrf
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="rejectionModalLabel">Reject Astrologer</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Please provide a remark for rejection:</p>
-                    <textarea class="form-control" name="remark" required rows="3"
-                        placeholder="Enter rejection reason..."></textarea>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary"
-                        data-bs-dismiss="modal">Cancel</button>
-                    <button type="submit" class="btn btn-danger">Reject</button>
-                </div>
-            </div>
-        </form>
-    </div>
-</div>
-
 <script>
-    $(document).ready(function() {
+      $(document).ready(function() {
         new DataTable('#misscalls-datatable');
     });
-</script>
-
-<script>
-    $(document).ready(function () {
-    // Handle Reject Option
-    $('.rejectOption').click(function (e) {
-        e.preventDefault();
-        let url = $(this).data('url');
-        $('#rejectionForm').attr('action', url); // set form action dynamically
-        $('#rejectionModal').modal('show');
-    });
-});
-
 </script>
 @endsection
