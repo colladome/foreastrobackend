@@ -131,7 +131,18 @@
                                 <a href="" class="btn btn-success">Approved</a> 
                             @endif -->
 
-                                    @if($astrologer->profile_status == 'approved' || $astrologer->profile_status == 'rejected')
+                                   
+                                
+                                </span>
+
+                            </div>
+                            @endforeach
+
+                            <!--  -->
+                            <div class="col-md-12 mb-4">
+                                <div class="row">
+                            <div class="col-md-3">
+                             @if($astrologer->profile_status == 'approved' || $astrologer->profile_status == 'rejected')
                                     <div class="btn-group">
                                         @if($astrologer->profile_status == 'approved')
                                         <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -154,15 +165,14 @@
 
                                     </div>
                                 </div>
-                                    @if($astrologer->profile_status == 'rejected')
-                                    <div class="py-4"><strong>Rejection Remark: </strong>{{ $astrologer->remark; }}</div>
-                                    @endif
+                                @if($astrologer->profile_status == 'rejected')
+                                <div class="pt-4"><strong>Rejection Remark: </strong>{{ $astrologer->remark; }}</div>
                                 @endif
-                                
-                                </span>
-
+                                @endif
                             </div>
-                            @endforeach
+                            </div>
+                            </div>
+                            <!--  -->
                         </div>
 
 
